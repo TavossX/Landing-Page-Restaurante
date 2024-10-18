@@ -13,7 +13,7 @@
 }
 
 #cta .tittle{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #3e3e3e;
 }
 
@@ -68,4 +68,31 @@
     top: 0;
     right: 0;
     z-index: -1;
+}
+
+.dish-img{
+    width: 300px;
+}
+
+@media screen and (max-width: 1170px){
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner, #banner img,#home .shape{
+        display: none;
+    }
+
+    #cta{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #phone_button button{
+        display: none;
+    } 
 }

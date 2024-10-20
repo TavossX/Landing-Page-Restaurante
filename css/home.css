@@ -33,7 +33,6 @@
 
 #cta_buttons a {
     text-decoration: none;
-    color: var(--color-neutral-1);
 }
 
 #phone_button {
@@ -71,12 +70,19 @@
 
 .dish-img {
     width: 300px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.dish-img:hover {
+    transform: scale(1.05);
+    z-index: -99;
 }
 
 @media screen and (max-width: 1170px) {
     #home {
-        min-height: 100%; /* Verifique como o min-height é definido */
-        padding-top: 0px;
+        min-height: 100%; 
+        padding-top: 10rem;
     }
 
     #banner, #banner img, #home .shape {

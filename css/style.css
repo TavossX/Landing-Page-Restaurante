@@ -7,11 +7,11 @@
 @import url('footer.css');
 
 :root{
-    --color-primary-1:#fff0ea;
-    --color-primary-2:#ffe8b4;
-    --color-primary-3:#ffe100;
-    --color-button:#ffcb45;
-    --color-primary-4:#e9a209;
+    --color-primary-1:#dddddd;
+    --color-primary-2: #e4f7d2;  
+    --color-primary-3: #a6e200;
+    --color-button: #7fcf40;      
+    --color-primary-4: #5b9902;
 
     --color-neutral-0:#fff;
     --color-neutral-1:#1d1d1d;
@@ -25,29 +25,46 @@ body{
 section{
     padding: 28px 8%;
     width: 100%;
-    height: 100vh;
 }
 
+/* From Uiverse.io by SujitAdroja */ 
 .btn-default{
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-button);
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--color-button);
+    padding: 7px 15px;
+    font-size: 17px;
+    border-radius:10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    transition: 0.3s ease;
-    gap: 5px;
-}
-
-.btn-default:hover{
-    background-color: #f8d477;
-    transform: scale(1.05);
-}
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+  }
+  
+  .btn-default:hover {
+    color: white;
+  }
+  
+  .btn-default::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: var(--color-button);
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  .btn-default:hover::before {
+    width: 250%;
+  }
+  
 
 .social-media-buttons{
     display: flex;

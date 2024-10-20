@@ -79,4 +79,8 @@
     #menu .section-tittle{
         text-align: center;
     }
+
+    #menu .section-subtittle{
+        font-size: 1.5rem;
+    }
 }

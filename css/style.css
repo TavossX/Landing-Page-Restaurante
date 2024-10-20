@@ -5,6 +5,7 @@
 @import url('menu.css');
 @import url('testimonials.css');
 @import url('footer.css');
+@import url('socials.css');
 
 :root{
     --color-primary-1:#dddddd;
@@ -98,3 +99,9 @@ section{
     font-size: 2.1875rem;
 }
 
+@media screen and (max-width: 600px){
+    .btn-default{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+}

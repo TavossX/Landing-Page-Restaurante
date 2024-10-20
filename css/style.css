@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('reset.css');
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+
+:root{
+    --color-primary-1:#fff0ea;
+    --color-primary-2:#ffe8b4;
+    --color-primary-3:#ffe100;
+    --color-button:#ffcb45;
+    --color-primary-4:#e9a209;
+
+    --color-neutral-0:#fff;
+    --color-neutral-1:#1d1d1d;
+    --color-neutral-2:#3e3e3e;
+}
 
 body{
-    background-color: #fff0ea;
+    background-color: var(--color-primary-1);
 }
 
 section{
     padding: 28px 8%;
+    width: 100%;
+    height: 100vh;
 }
 
 .btn-default{
@@ -13,7 +33,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffcb45;
+    background-color: var(--color-button);
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 600;
@@ -40,11 +60,11 @@ section{
     justify-content: center;
     width: 45px;
     height: 40px;
-    background-color: #fff;
+    background-color: var(--color-neutral-0);
     font-size: 1.25rem;
     border-radius: 10px;
     text-decoration: none;
-    color: #3e3e3e;
+    color: var(--color-neutral-2);
     transition: box-shadow 0.3s ease;
 }
 
@@ -53,7 +73,7 @@ section{
 }
 
 .section-tittle{
-    color: #e9a209;
+    color: var(--color-primary-4);
     font-size: 1.563rem;
 }
 

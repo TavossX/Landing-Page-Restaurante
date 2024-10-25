@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     var mobileBtn = document.getElementById('mobile_btn');
-    var mobileMenu = document.getElementById('mobile_menu');
+    var mobileMenu = document.getElementById('mobile_nav_list');
     var icon = mobileBtn.querySelector('i');
 
-    mobileBtn.addEventListener('click', function() {
+    mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
         mobileMenu.classList.toggle('active');
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-x');
@@ -52,4 +53,26 @@ document.addEventListener('DOMContentLoaded', function() {
     ScrollReveal().reveal('.dish', { origin: 'right' });
     ScrollReveal().reveal('#testimonials_content', { origin: 'right' });
     ScrollReveal().reveal('#testimonial_chef', { origin: 'left' });
+
+    // Fechar o menu ao clicar fora dele
+    document.addEventListener('click', function(e) {
+        if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                icon.classList.remove('fa-x');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+
+    // Fechar o menu ao clicar em qualquer link de navegação
+    document.querySelectorAll('.nav-item a').forEach(function(item) {
+        item.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                icon.classList.remove('fa-x');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
 });

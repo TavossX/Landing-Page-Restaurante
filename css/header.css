@@ -72,23 +72,29 @@ header{
         cursor: pointer;
     }
 
-    #mobile_menu {
+    #mobile_nav_list {
         display: none;
+        gap: 7rem;
+        position: absolute;
+        top: 10vh;
+        right: 12.2rem;
+        width: 50vw;
+        height: 100vh;
+        background-color: var(--color-primary-1);
         flex-direction: column;
         align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+        padding-top: 2rem;
     }
 
-    #mobile_menu.active {
-        display: flex;
+    #mobile_nav_list.active li{
+        animation: 0.5s ease 0.3s 1 normal forwards running navLinkFade;
     }
 
-    #mobile_nav_list {
+    #mobile_nav_list.active {
+        transform: translateX(0);
         display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
-        list-style: none;
-        text-align: center;
     }
 
     .nav-item {

@@ -6,6 +6,7 @@
 @import url('testimonials.css');
 @import url('footer.css');
 @import url('socials.css');
+@import url('navbar.css');
 
 :root{
     --color-primary-1:#dddddd;
